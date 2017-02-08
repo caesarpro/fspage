@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: wired-backoffice-leads
+Implementation-Version: 1.0.0-FEATURE-SQS-RECEIVER-SNAPSHOT
+

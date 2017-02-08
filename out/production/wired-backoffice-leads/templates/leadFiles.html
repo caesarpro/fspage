@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Lead file on failure management</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(leadFiles)}">
+        <h2>LeadFiles List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Product Id</th>
+                <th>Description</th>
+                <th>Body</th>
+                <th>View</th>
+                <th>Edit</th>
+            </tr>
+            <tr th:each="leadFile : ${leadFiles}">
+                <td th:text="${leadFile.id}"><a href="/product/${leadFile.id}">Id</a></td>
+                <td th:text="${leadFile.leadFileId}">Lead file Id</td>
+                <td th:text="${leadFile.description}">descirption</td>
+                <td th:text="${leadFile.body}">Body</td>
+                <td><a th:href="${ '/leadFile/' + leadFile.id}">View</a></td>
+                <td><a th:href="${'/leadFile/edit/' + leadFile.id}">Edit</a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>
