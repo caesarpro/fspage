@@ -21,14 +21,12 @@ public class LeadFile {
     @Version
     private Integer version;
 
-    @Column(length=10485760)
+    @Column(length = 10485760)
     private String body;
 
     private Date sentDate;
 
     private Date receiveDate;
-
-
 
 
     public Integer getVersion() {

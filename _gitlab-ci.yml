@@ -1,0 +1,9 @@
+image: yleguernf6/ci-dockerjava
+
+build:
+  stage: build
+  tags:
+    - wired
+    - docker
+  script:
+  - ./gradlew buildDocker --refresh-dependencies

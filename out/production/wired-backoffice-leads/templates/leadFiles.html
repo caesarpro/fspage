@@ -15,7 +15,8 @@
             <tr>
                 <th>Id</th>
                 <th>Product Id</th>
-                <th>Description</th>
+                <th>Date reception</th>
+                <th>Date d'envoi</th>
                 <th>Body</th>
                 <th>View</th>
                 <th>Edit</th>
@@ -23,7 +24,8 @@
             <tr th:each="leadFile : ${leadFiles}">
                 <td th:text="${leadFile.id}"><a href="/product/${leadFile.id}">Id</a></td>
                 <td th:text="${leadFile.leadFileId}">Lead file Id</td>
-                <td th:text="${leadFile.description}">descirption</td>
+                <td th:text="${leadFile.receiveDate}">Date reception</td>
+                <td th:text="${leadFile.sentDate}">Date d'envoi</td>
                 <td th:text="${leadFile.body}">Body</td>
                 <td><a th:href="${ '/leadFile/' + leadFile.id}">View</a></td>
                 <td><a th:href="${'/leadFile/edit/' + leadFile.id}">Edit</a></td>

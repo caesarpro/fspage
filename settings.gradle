@@ -1,12 +1,4 @@
-pluginRepositories {
-  gradlePluginPortal()
-  maven({
-    url 'https://nexus.wired-aws.com/repository/maven-wired-public/'
-    credentials {
-      username WIRED_MAVEN_REPOSITORY_USER
-      password WIRED_MAVEN_REPOSITORY_PASSWORD
-    }
-  })
-}
+
+
 
 rootProject.name = 'wired-backoffice-leads'

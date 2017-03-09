@@ -29,7 +29,7 @@ public class LeadFileRepositoryTest {
     }
 
     @Test
-    public void testSaveProduct(){
+    public void testSaveProduct() {
         //setup leadFile
         LeadFile leadFile = new LeadFile();
 
@@ -48,10 +48,10 @@ public class LeadFileRepositoryTest {
 
         //should equal
         assertEquals(leadFile.getId(), fetchedLeadFile.getId());
-        assertEquals(leadFile.getBody() ,fetchedLeadFile.getBody());
+        assertEquals(leadFile.getBody(), fetchedLeadFile.getBody());
 
         //update body and save
-        leadFile.setBody(leadFile.getBody()+" modifié ");
+        leadFile.setBody(leadFile.getBody() + " modifié ");
         leadFileRepository.save(fetchedLeadFile);
 
         //get from DB, should be updated
@@ -67,7 +67,7 @@ public class LeadFileRepositoryTest {
 
         int count = 0;
 
-        for(LeadFile p : products){
+        for (LeadFile p : products) {
             count++;
         }
 

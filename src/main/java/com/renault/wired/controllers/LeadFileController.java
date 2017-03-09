@@ -20,32 +20,27 @@ public class LeadFileController {
     }
 
     @RequestMapping(value = "/leadFiles", method = RequestMethod.GET)
-    public String list(Model model){
+    public String list(Model model) {
         model.addAttribute("leadFiles", leadFileService.listAllLeadFiles());
         System.out.println("Returning leadFiles:");
         return "leadFiles";
     }
 
     @RequestMapping("leadFile/{id}")
-    public String showProduct(@PathVariable Integer id, Model model){
+    public String showLeadFile(@PathVariable Integer id, Model model) {
         model.addAttribute("leadFile", leadFileService.getLeadFileById(id));
         return "leadFileshow";
     }
 
     @RequestMapping("leadFile/edit/{id}")
-    public String edit(@PathVariable Integer id, Model model){
+    public String edit(@PathVariable Integer id, Model model) {
         model.addAttribute("leadFile", leadFileService.getLeadFileById(id));
         return "leadFileform";
     }
 
-    @RequestMapping("leadFile/new")
-    public String newProduct(Model model){
-        model.addAttribute("leadFile", new LeadFile());
-        return "leadFileform";
-    }
 
     @RequestMapping(value = "leadFile", method = RequestMethod.POST)
-    public String saveProduct(LeadFile leadFile){
+    public String saveLeadFile(LeadFile leadFile) {
 
         leadFileService.saveLeadFile(leadFile);
 
