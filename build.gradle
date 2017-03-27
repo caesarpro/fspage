@@ -1,0 +1,36 @@
+plugins {
+  id 'org.springframework.boot'  version '1.5.1.RELEASE'
+}
+repositories {
+  mavenCentral()
+}
+dependencies {
+  // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '1.5.1.RELEASE'
+
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.1.RELEASE'
+  // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '1.5.1.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.1.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '1.5.1.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.1.RELEASE'
+// https://mvnrepository.com/artifact/org.webjars/bootstrap
+  compile group: 'org.webjars', name: 'bootstrap', version: '3.3.7-1'
+// https://mvnrepository.com/artifact/org.webjars.bower/jquery
+  compile group: 'org.webjars.bower', name: 'jquery', version: '2.1.4'
+// https://mvnrepository.com/artifact/com.h2database/h2
+  compile group: 'com.h2database', name: 'h2', version: '1.4.193'
+// https://mvnrepository.com/artifact/postgresql/postgresql
+  compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1201-jdbc41'
+
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin
+ compile group: 'org.springframework.boot', name: 'spring-boot-maven-plugin', version: '1.5.1.RELEASE'
+
+
+  testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+
+
+}

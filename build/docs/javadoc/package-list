@@ -1,0 +1,7 @@
+com.renault.wired
+com.renault.wired.bootstrap
+com.renault.wired.configuration
+com.renault.wired.controllers
+com.renault.wired.domain
+com.renault.wired.repositories
+com.renault.wired.services
